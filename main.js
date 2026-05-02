@@ -7,8 +7,7 @@ const laptop = document.querySelector('#LAPTOP');
 const hasilemisi = document.querySelector('#HasilEmisi');
 const reset = document.querySelector('#Reset');
 
-//buat mengatur Elemen yang Kita Inginkan
-hitung.addEventListener('click', function () {
+function hitungemisi(){
     const nilaijarak = Number(jarak.value);
     const pilihkendaraan = kendaraan.value;
     const jamAC = Number(ac.value);
@@ -59,16 +58,16 @@ hitung.addEventListener('click', function () {
     //penentuan warna saat di klik
     if (total >= 0 && total < 2) {
         warnahasil = "Penggunaan Anda Masih Aman ✅ 🟢 😊";
-        document.body.style.backgroundColor = "#2d6a4f";
+        document.body.style.backgroundColor = '#52b788';
     }
     else if (total >= 2 && total <= 5) {
         warnahasil = "Butuh Perhatian Untuk Penggunaan Anda⚠️ 🟡 😬";
-        document.body.style.backgroundColor = '#e07b39';
+        document.body.style.backgroundColor = '#f4a261';
     }
 
     else {
         warnahasil = "Sangat Berbahaya, Perlu Tindakan Segera🚨 🔴 😰";
-        document.body.style.backgroundColor = '#d33131';
+        document.body.style.backgroundColor = '#e74c3c';
     }
 
 
@@ -94,7 +93,30 @@ hitung.addEventListener('click', function () {
     <p>${terbesar}</p>
     <p>${warnahasil}</p>`;
 
+    return total;
+}
+
+//buat mengatur Elemen yang Kita Inginkan
+hitung.addEventListener('click', function(){
+    const total = hitungemisi();
+    if(!total) return;
+
+    if (total >= 0 && total < 2) {
+        document.body.style.backgroundColor = '#2d6a4f';
+    }
+    else if (total >= 2 && total <= 5) {
+        document.body.style.backgroundColor = '#e07b39';
+    }
+
+    else {
+        document.body.style.backgroundColor = '#d33131';
+    }
 });
+
+jarak.addEventListener('input', hitungemisi);
+kendaraan.addEventListener('change', hitungemisi);
+ac.addEventListener('input', hitungemisi);
+laptop.addEventListener('input', hitungemisi);
 
 
 //untuk mereset
