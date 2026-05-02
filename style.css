@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'DM Sans',sans-serif;
+    background-color: #f8f5f8;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+header{
+    background: linear-gradient(135deg, #1a3a2a, #2d6a4f); 
+    padding: 48px 40px;
+    color: white;
+}
+
+main{
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+
+.tombol{
+    background: white;
+    border-radius: 20px;
+    padding: 36px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+label{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6b7c6e;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+P{
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6b7c6e;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+input, button, select{
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input, select{
+    width: 100%;
+    padding: 13px 16px;
+    border: 1.5px solid #e0ebe4;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f8f5f0;
+    outline: none;
+}
+
+input:focus, select:focus{
+    border-color: #52b788;
+    box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+}
+
+#tombolhitung{
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+#Hitung{
+    flex: 5;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    background: linear-gradient(135deg, #2d6a4f, #52b788);
+    border: none;
+    font-weight: 500;
+    transition: transform 0.15s, box-shadow 0.2s;
+}
+
+#Hitung:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45, 106, 79, 0.3);
+}
+
+#Reset{
+    flex: 5;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background: linear-gradient(135deg, #e07b39, #f4a261);
+    font-weight: 500;
+    transition: transform 0.15s, box-shadow 0.2s;
+}
+
+#Reset:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(224, 123, 57, 0.3);
+}
+
+#HasilEmisi p{
+    text-transform: none;
+    color: black;
+    font-size: 16px;
+
+}
